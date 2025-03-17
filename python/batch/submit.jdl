@@ -1,0 +1,57 @@
+universe = vanilla
+executable            = runScript.sh
+
+arguments = flist_ZeroBias_Run2016GH.txt                                                 $(ProcId) /eos/user/t/therwig/jtfi/250317_ZeroBias_Run2016GH                                                 True
+# arguments = flist_SingleNeutrino.txt                                                     $(ProcId) /eos/user/t/therwig/jtfi/250303_SingleNeutrino                                                     False
+# arguments = flist_bbHToBB_M-125_4FS_yt2_TuneCP5-13TeV-amcatnlo-pythia8.txt               $(ProcId) /eos/user/t/therwig/jtfi/250303_bbHToBB_M-125_4FS_yt2_TuneCP5-13TeV-amcatnlo-pythia8               False
+# arguments = flist_ggZH_HToBB_ZToNuNu_M-125_TuneCP5_13TeV-powheg-pythia8.txt              $(ProcId) /eos/user/t/therwig/jtfi/250303_ggZH_HToBB_ZToNuNu_M-125_TuneCP5_13TeV-powheg-pythia8              False
+# arguments = flist_GluGluHToBB_M-125_TuneCP5_13TeV-powheg-pythia8.txt                     $(ProcId) /eos/user/t/therwig/jtfi/250303_GluGluHToBB_M-125_TuneCP5_13TeV-powheg-pythia8                     False
+# arguments = flist_GluGluToHHTo4B_cHHH1_TuneCP5_PSWeights_13TeV-powheg-pythia8.txt        $(ProcId) /eos/user/t/therwig/jtfi/250303_GluGluToHHTo4B_cHHH1_TuneCP5_PSWeights_13TeV-powheg-pythia8        False
+# arguments = flist_GluGluToSUEP_HT400_Txx_TuneCP5_13TeV-pythia8.txt                       $(ProcId) /eos/user/t/therwig/jtfi/250303_GluGluToSUEP_HT400_Txx_TuneCP5_13TeV-pythia8                       False
+# arguments = flist_TTToHadronic_TuneCP5_13TeV-powheg-pythia8.txt                          $(ProcId) /eos/user/t/therwig/jtfi/250303_TTToHadronic_TuneCP5_13TeV-powheg-pythia8                          False
+# arguments = flist_VBFHToBB_M-125_TuneCP5_13TeV-powheg-pythia8.txt                        $(ProcId) /eos/user/t/therwig/jtfi/250303_VBFHToBB_M-125_TuneCP5_13TeV-powheg-pythia8                        False
+# arguments = flist_VBFHToCC_M-125_TuneCP5_13TeV-powheg-pythia8.txt                        $(ProcId) /eos/user/t/therwig/jtfi/250303_VBFHToCC_M-125_TuneCP5_13TeV-powheg-pythia8                        False
+# arguments = flist_ZH_HToBB_ZToNuNu_M-125_TuneCP5_13TeV-powheg-pythia8.txt                $(ProcId) /eos/user/t/therwig/jtfi/250303_ZH_HToBB_ZToNuNu_M-125_TuneCP5_13TeV-powheg-pythia8                False
+# arguments = flist_ggH_HToSSToqqqq_MH-125_MS-15_ctauS-XX_TuneCP5_13TeV-powheg-pythia8.txt $(ProcId) /eos/user/t/therwig/jtfi/250303_ggH_HToSSToqqqq_MH-125_MS-15_ctauS-XX_TuneCP5_13TeV-powheg-pythia8 False
+
+output                = logs/$(ClusterId).$(ProcId).out
+error                 = logs/$(ClusterId).$(ProcId).err
+log                   = logs/$(ClusterId).log
+transfer_input_files = ""
+transfer_output_files = ""
+# request_memory        = 4700
+
+#+JobFlavour           = "testmatch"
++JobFlavour           = "tomorrow" 
+# 1 hour
+#+JobFlavour           = "microcentury" 
+#+JobFlavour           = "espresso"
+MY.WantOS = "el7"
+
+queue 333
+
+# 117 flist_SingleNeutrino.txt
+# 100 flist_bbHToBB_M-125_4FS_yt2_TuneCP5-13TeV-amcatnlo-pythia8.txt
+# 55 flist_ggZH_HToBB_ZToNuNu_M-125_TuneCP5_13TeV-powheg-pythia8.txt
+# 95 flist_GluGluHToBB_M-125_TuneCP5_13TeV-powheg-pythia8.txt
+# 33 flist_GluGluToHHTo4B_cHHH1_TuneCP5_PSWeights_13TeV-powheg-pythia8.txt
+# 58 flist_GluGluToSUEP_HT400_Txx_TuneCP5_13TeV-pythia8.txt
+# 2434 flist_TTToHadronic_TuneCP5_13TeV-powheg-pythia8.txt
+# 42 flist_VBFHToBB_M-125_TuneCP5_13TeV-powheg-pythia8.txt
+# 93 flist_VBFHToCC_M-125_TuneCP5_13TeV-powheg-pythia8.txt
+# 54 flist_ZH_HToBB_ZToNuNu_M-125_TuneCP5_13TeV-powheg-pythia8.txt
+# 320 flist_ggH_HToSSToqqqq_MH-125_MS-15_ctauS-XX_TuneCP5_13TeV-powheg-pythia8.txt
+# 333 flist_ZeroBias_Run2016GH.txt
+
+# 333 flist_ZeroBias_Run2016GH.txt
+# 117 flist_SingleNeutrino.txt
+# 100 flist_bbHToBB_M-125_4FS_yt2_TuneCP5-13TeV-amcatnlo-pythia8.txt
+# 55 flist_ggZH_HToBB_ZToNuNu_M-125_TuneCP5_13TeV-powheg-pythia8.txt
+# 95 flist_GluGluHToBB_M-125_TuneCP5_13TeV-powheg-pythia8.txt
+# 33 flist_GluGluToHHTo4B_cHHH1_TuneCP5_PSWeights_13TeV-powheg-pythia8.txt
+# 58 flist_GluGluToSUEP_HT400_Txx_TuneCP5_13TeV-pythia8.txt
+# 2434 flist_TTToHadronic_TuneCP5_13TeV-powheg-pythia8.txt
+# 42 flist_VBFHToBB_M-125_TuneCP5_13TeV-powheg-pythia8.txt
+# 93 flist_VBFHToCC_M-125_TuneCP5_13TeV-powheg-pythia8.txt
+# 54 flist_ZH_HToBB_ZToNuNu_M-125_TuneCP5_13TeV-powheg-pythia8.txt
+# 320 flist_ggH_HToSSToqqqq_MH-125_MS-15_ctauS-XX_TuneCP5_13TeV-powheg-pythia8.txt
